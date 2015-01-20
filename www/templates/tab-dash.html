@@ -3,14 +3,14 @@
     <div class="list  card">
 
       <a ng-repeat="category in cc.categories" href="#" class="item item-icon-left">
-      {{category.id+1}}.{{category.name}}
+      {{category.id}}.{{category.name}}
       </a>
 
     </div>
   </ion-content>
   <ion-content  class="padding list-main">
-   <h3>{{cc.hello}}</h3>
-   <input ng-model="cc.hello" type="text"/>
+   <h3>{{cc.hi}}</h3>
+   <input ng-model="cc.hi" type="text"/>
    <ul class="list">
       <li ng-repeat="bookmark in cc.bookmarks" class="item">
         <button class="button button-small button-positive">

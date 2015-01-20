@@ -2,7 +2,7 @@
 
 	CategoryCtrl.controller('categoryCtrl',function () {
 		var cc = this;
-		cc.hello = 'Hello Whatever!';
+		cc.hi = 'Hi!';
 
 	cc.categories = [
 	    {"id": 0, "name": "Development"},
