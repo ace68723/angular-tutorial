@@ -5,8 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('angular', ['ionic'
-                            ])
+angular.module('angular', ['ionic',
+                           'CategoryCtrl'
+                          ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -44,7 +45,7 @@ angular.module('angular', ['ionic'
     views: {
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
-        controller: ''
+        controller: 'categoryCtrl as cc'
       }
     }
   })

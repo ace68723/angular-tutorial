@@ -2,21 +2,23 @@
   <ion-content class="padding list-category">
     <div class="list  card">
 
-      <a  href="#" class="item item-icon-left">
-      
+      <a ng-repeat="category in cc.categories" href="#" class="item item-icon-left">
+      {{category.id+1}}.{{category.name}}
       </a>
 
     </div>
   </ion-content>
   <ion-content  class="padding list-main">
-   <h3></h3>
-   <input  type="text"/>
+   <h3>{{cc.hi}}</h3>
+   <input ng-model="cc.hi" type="text"/>
    <ul class="list">
-      <li   class="item">
+      <li ng-repeat="bookmark in cc.bookmarks" class="item">
         <button class="button button-small button-positive">
             Edit
         </button>
-            <a href=""  target="_blank" ></a>
+        <a href="{{bookmark.url}}"  target="_blank" >
+          {{bookmark.title}}
+        </a>
       </li>
    </ul>
   </ion-content>

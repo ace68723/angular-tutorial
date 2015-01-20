@@ -1,12 +1,17 @@
+	var CategoryCtrl = angular.module('CategoryCtrl',[]);
 
-	categories = [
+	CategoryCtrl.controller('categoryCtrl',function () {
+		var cc = this;
+		cc.hi = 'Hi!';
+
+	cc.categories = [
 	    {"id": 0, "name": "Development"},
 	    {"id": 1, "name": "Design"},
 	    {"id": 2, "name": "Exercise"},
 	    {"id": 3, "name": "Humor"}
 	];
 	
-	bookmarks = [
+	cc.bookmarks = [
 	    {"id":0, "title": "AngularJS", "url": "http://angularjs.org", "category": "Development" },
 	    {"id":1, "title": "Egghead.io", "url": "http://angularjs.org", "category": "Development" },
 	    {"id":2, "title": "A List Apart", "url": "http://alistapart.com/", "category": "Design" },
@@ -16,3 +21,6 @@
 	    {"id":6, "title": "Senor Gif", "url": "http://memebase.cheezburger.com/senorgif", "category": "Humor" },
 	    {"id":7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
 	    {"id":8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
+	]
+})
+	
