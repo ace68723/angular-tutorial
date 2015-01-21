@@ -2,17 +2,18 @@
   <ion-content class="padding list-category">
     <div class="list  card">
 
-      <a ng-repeat="category in cc.categories" href="#" class="item item-icon-left">
+      <a ng-repeat="category in cc.categories" href="#" ng-click="cc.setCurrentCategory(category.name)" class="item item-icon-left">
       {{category.id+1}}.{{category.name}}
       </a>
 
     </div>
   </ion-content>
   <ion-content  class="padding list-main">
-   <h3>{{cc.hi}}</h3>
-   <input ng-model="cc.hi" type="text"/>
+    <h3 ng-click="cc.setCurrentCategory('!null')">{{cc.hi}}</h3>
+    <!-- <h3 ng-click="cc.currentCategory.name = '!null'">{{cc.hi}}</h3> -->
+ <!--   <input ng-model="cc.currentCategory.name" type="text"/> -->
    <ul class="list">
-      <li ng-repeat="bookmark in cc.bookmarks" class="item">
+      <li ng-repeat="bookmark in cc.bookmarks | filter:{category:cc.currentCategory}" class="item">
         <button class="button button-small button-positive">
             Edit
         </button>

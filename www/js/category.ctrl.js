@@ -22,5 +22,15 @@
 	    {"id":7, "title": "Wimp", "url": "http://wimp.com", "category": "Humor" },
 	    {"id":8, "title": "Dump", "url": "http://dump.com", "category": "Humor" }
 	]
+
+	cc.currentCategory = '!null';
+	cc.currentCategory.name = '!null'
+	 console.log(cc.currentCategory)
+
+	cc.setCurrentCategory = function(category) {
+		cc.currentCategory = category;
+		console.log(cc.currentCategory)
+	};
+
 })
 	
